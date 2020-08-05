@@ -4,7 +4,7 @@ let adj = ['great', 'big'];
 let noun = ['jogger', 'racoon'];
 let domainHacks = ['.com', '.net', '.us', '.io'];
 
-function generator (parts) {
+/* function generator (parts) {
     
     var string = "";
 
@@ -15,6 +15,24 @@ function generator (parts) {
     }
 
     return string;
+} */
+
+function generator (parts) {
+    console.log(parts);
+
+    for (let i = 0; i < pronoun.length; i++) {
+        const element = pronoun[i];
+        for (let i = 0; i < adj.length; i++) {
+            const element1 = adj[i];
+            for (let i = 0; i < noun.length; i++) {
+                const element2 = noun[i];
+                for (let i = 0; i < domainHacks.length; i++) {
+                    const element3 = domainHacks[i];
+                    console.log('Domain:', element +''+element1 +''+ element2 +''+ element3);
+                }
+            }
+        }
+    }
 }
 
 console.log(generator([pronoun, adj, noun, domainHacks]));
